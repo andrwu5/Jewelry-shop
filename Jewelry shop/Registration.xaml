@@ -1,0 +1,40 @@
+﻿<Window x:Class="Jewelry_shop.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jewelry_shop"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="700" Width="1200" Icon="icon.ico">
+    <Grid Margin="-78,-58,-1.4,-17.6">
+        <Grid.Background>
+            <ImageBrush ImageSource="Registration.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="btRegistration" Content="Зарегисрировать" Click="btRegistration_Click" HorizontalAlignment="Left" Height="35" Margin="599,635,0,0" VerticalAlignment="Top" Width="137">
+            <Button.ToolTip>Нажмите для регистрации</Button.ToolTip>
+        </Button>
+        <TextBox HorizontalAlignment="Left" Height="27" Margin="620,211,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="190" x:Name="txtBoxLogin" FontSize="18">
+            <TextBox.ToolTip>Нужно ввести логин Пример: Kovalenko@mail.ru</TextBox.ToolTip>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Height="25" Text ="" Margin="621,322,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="190" x:Name="txtBoxPassword" FontSize="18">
+            <TextBox.ToolTip>Введите пароль Пример: Kovalenko1</TextBox.ToolTip>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Height="26" Text ="" Margin="622,442,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="190" x:Name="txtBoxPassword2" FontSize="18">
+            <TextBox.ToolTip>Нужно повторить пароль</TextBox.ToolTip>
+        </TextBox>
+        <Button Content="Читать" HorizontalAlignment="Left" Margin="884,566,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.925,2.625"/>
+        <CheckBox x:Name="cblicenziya" Content="" HorizontalAlignment="Left" Margin="576,500,0,0" VerticalAlignment="Top" Height="16" Width="19"/>
+        <TextBox HorizontalAlignment="Left" Height="27" Margin="213,211,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="190" x:Name="txtBoxSurname" FontSize="18">
+            <TextBox.ToolTip>Нужно ввести логин Пример: Kovalenko@mail.ru</TextBox.ToolTip>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Height="27" Margin="213,315,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="190" x:Name="txtBoxName" FontSize="18">
+            <TextBox.ToolTip>Нужно ввести логин Пример: Kovalenko@mail.ru</TextBox.ToolTip>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Height="26" Text ="" Margin="218,435,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="190" x:Name="txtBoxMiddle_Name" FontSize="18">
+            <TextBox.ToolTip>Нужно повторить пароль</TextBox.ToolTip>
+        </TextBox>
+        <TextBox HorizontalAlignment="Left" Height="26" Text ="" Margin="222,545,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="190" x:Name="txtBoxTelephone_Number" FontSize="18">
+            <TextBox.ToolTip>Нужно повторить пароль</TextBox.ToolTip>
+        </TextBox>
+    </Grid>
+</Window>

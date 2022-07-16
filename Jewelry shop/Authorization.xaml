@@ -1,0 +1,24 @@
+﻿<Window x:Class="Jewelry_shop.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jewelry_shop"
+        mc:Ignorable="d"
+         Title="Авторизация" Height="626.471" Width="634.792" Icon="icon.ico">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Authorization.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <TextBox HorizontalAlignment="Left" Height="42" Text ="" Margin="205,219,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="213" x:Name="txtBoxLogin" FontSize="18">
+            <TextBox.ToolTip>Введите логин</TextBox.ToolTip>
+        </TextBox>
+        <Button Content="Регистрация" HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="226" Click="Button_Test_Click" FontSize="25" Margin="192,388,0,0"/>
+        <PasswordBox Height="43"  Margin="204,333,210,0" 
+            x:Name="txtBoxPas" VerticalAlignment="Top" 
+            Background="White" Foreground="DarkBlue" FontSize="18" PasswordChar="*">
+            <PasswordBox.ToolTip>Введите пароль</PasswordBox.ToolTip>
+        </PasswordBox>
+        <Button x:Name="btRegistration" Content="Вход" HorizontalAlignment="Left" Height="71" Margin="237,435,0,0" VerticalAlignment="Top" Width="142" FontSize="25" Click="btRegistration_Click"/>
+    </Grid>
+</Window>

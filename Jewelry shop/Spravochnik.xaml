@@ -1,0 +1,23 @@
+﻿<Window x:Class="Jewelry_shop.Spravochnik"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jewelry_shop"
+        mc:Ignorable="d"
+        Title="Справочник" Height="450" Width="800" Icon="icon.ico">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Other.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="btJewelry" Content="Каталог украшений" HorizontalAlignment="Left" Margin="61,98,0,0" VerticalAlignment="Top" Width="157" Height="76" Click="btJewelry_Click"/>
+        <Button x:Name="btEmployee" Content="Справочник сотрудников" HorizontalAlignment="Left" Margin="490,218,0,0" VerticalAlignment="Top" Width="157" Height="79" Click="BtEmployee_Click"/>
+        <Button x:Name="btSupply" Content="Поставки" HorizontalAlignment="Left" Margin="490,98,0,0" VerticalAlignment="Top" Width="157" Height="80" Click="BtSupply_Click"/>
+        <Button x:Name="btKlients" Content="Список клиентов" HorizontalAlignment="Left" Height="79" Margin="277,98,0,0" VerticalAlignment="Top" Width="157" Click="BtKlients_Click"/>
+        <Button x:Name="btNakladnaya" Content="Накладные" HorizontalAlignment="Left" Margin="281,218,0,0" VerticalAlignment="Top" Width="157" Height="79" Click="BtNakladnaya_Click"/>
+        <Button Content="Огранка" HorizontalAlignment="Left" Margin="59,214,0,0" VerticalAlignment="Top" Width="157" Click="Button_Click" Height="79"/>
+        <Button Content="Должность" HorizontalAlignment="Left" Margin="57,319,0,0" VerticalAlignment="Top" Width="157" Height="79" Click="Button_Click_1"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="700,394,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+
+    </Grid>
+</Window>

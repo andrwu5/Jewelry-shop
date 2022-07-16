@@ -1,0 +1,46 @@
+﻿<Window x:Class="Jewelry_shop.ListEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jewelry_shop"
+        mc:Ignorable="d"
+        Title="Список сотрудников" Height="600" Width="1000" Icon="icon.ico" Activated="Window_Activated" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Other.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <DataGrid SelectionMode="Single" x:Name="dgListEmployee" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="196" Margin="136,126,0,0" VerticalAlignment="Top" Width="854"/>
+        <Button x:Name="btClose" Content="Назад" HorizontalAlignment="Left" Margin="17,540,0,0" VerticalAlignment="Top" Width="58" Height="20" Click="btClose_Click"/>
+        <Button x:Name="btInsert_Employee" Content="Добавить сотрудник" HorizontalAlignment="Left" Margin="7,152,0,0" VerticalAlignment="Top" Width="121" Height="31" Click="btInsert_Employee_Click"/>
+        <Button x:Name="btUpdate_Employee" Content="Изменить сотрудник" HorizontalAlignment="Left" Margin="7,194,0,0" VerticalAlignment="Top" Width="121" Height="37" Click="btUpdate_Employee_Click"/>
+        <Button x:Name="btDelete_Employee" Content="Удалить сотрудник" HorizontalAlignment="Left" Margin="6,238,0,0" VerticalAlignment="Top" Width="121" Height="31" Click="btDelete_Employee_Click"/>
+        <Button x:Name="btSearch" Content="Поиск" HorizontalAlignment="Left" Margin="5,276,0,0" VerticalAlignment="Top" Width="122" Height="28" Click="btSearch_Click"/>
+        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Height="23" Margin="152,461,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Поиск" HorizontalAlignment="Left" Margin="153,434,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbMiddleName_Employee" HorizontalAlignment="Left" Height="23" Margin="4,461,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.69,0.626"/>
+        <Label Content="Отчество" HorizontalAlignment="Left" Margin="2,438,0,0" VerticalAlignment="Top" Width="124"/>
+        <TextBox x:Name="tbSurname_Employee" HorizontalAlignment="Left" Height="23" Margin="0,363,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="-2,336,0,0" VerticalAlignment="Top" Width="128"/>
+        <ListBox x:Name="lbPosition" HorizontalAlignment="Left" Height="130" Margin="350,326,0,0" VerticalAlignment="Top" Width="315"/>
+        <ListBox x:Name="lbStatus_Employee" HorizontalAlignment="Left" Height="130" Margin="686,325,0,0" VerticalAlignment="Top" Width="299" RenderTransformOrigin="0.858,0.548"/>
+        <TextBox x:Name="tbStatus_Employee" HorizontalAlignment="Left" Height="23" Margin="762,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Text="{Binding SelectedItem.Name_Of_Employee_Status, ElementName=lbStatus_Employee}"/>
+        <Button x:Name="btInsert_Status_Employee" Content="Добавить" HorizontalAlignment="Left" Margin="719,523,0,0" VerticalAlignment="Top" Width="76" Height="32" Click="btInsert_Status_Employee_Click"/>
+        <Button x:Name="btUpdate_Status_Employee" Content="Изменить " HorizontalAlignment="Left" Margin="805,523,0,0" VerticalAlignment="Top" Width="76" Height="32" RenderTransformOrigin="1.325,0.638" Click="btUpdate_Status_Employee_Click"/>
+        <Button x:Name="btDelete_Status_Employee" Content="Удалить" HorizontalAlignment="Left" Margin="890,523,0,0" VerticalAlignment="Top" Width="76" Height="32" RenderTransformOrigin="1.325,0.638" Click="btDelete_Status_Employee_Click"/>
+        <TextBox x:Name="tbName_Employee" HorizontalAlignment="Left" Height="23" Margin="3,414,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.69,0.626"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="3,387,0,0" VerticalAlignment="Top" Width="124"/>
+        <TextBox x:Name="tbEmployment_data" HorizontalAlignment="Left" Height="23" Margin="151,413,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.69,0.626"/>
+        <Label Content="Дата трудоустройства" HorizontalAlignment="Left" Margin="148,389,0,0" VerticalAlignment="Top" Width="124"/>
+        <TextBox x:Name="tbExperience" HorizontalAlignment="Left" Height="23" Margin="149,365,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.69,0.626"/>
+        <Label Content="Стаж" HorizontalAlignment="Left" Margin="151,338,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Статус сотрудника" HorizontalAlignment="Left" Margin="768,457,0,0" VerticalAlignment="Top" Width="124" Height="28"/>
+        <TextBox x:Name="txtBoxLogin" HorizontalAlignment="Left" Height="23" Margin="141,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxPassword" HorizontalAlignment="Left" Height="23" Margin="285,533,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelLogin" Content="Логин" HorizontalAlignment="Left" Margin="142,505,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbPassword" Content="Пароль" HorizontalAlignment="Left" Margin="285,507,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxPassword2" HorizontalAlignment="Left" Height="23" Margin="425,532,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbPassword2" Content="Повторите пароль" HorizontalAlignment="Left" Margin="425,506,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

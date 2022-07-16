@@ -1,0 +1,62 @@
+﻿<Window x:Class="Jewelry_shop.KotalogJewelry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jewelry_shop"
+        mc:Ignorable="d"
+        Title="Коталог украшений" Height="500" Width="800" Loaded="Window_Loaded" Icon="icon.ico">
+    <Grid x:Name="grid1">
+        <Grid.Background>
+            <ImageBrush ImageSource="Other.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <TabControl HorizontalAlignment="Left" Height="425" VerticalAlignment="Top" Width="792" Margin="0,46,0,-0.6">
+            <TabItem Header="Каталог">
+                <Grid Margin="0,0,0.4,-49">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="78*"/>
+                        <ColumnDefinition Width="249*"/>
+                        <ColumnDefinition Width="412*"/>
+                        <ColumnDefinition Width="47*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid SelectionMode="Single" x:Name="dgJewelry" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="239" Margin="47,29,0,0" VerticalAlignment="Top" Width="548" Grid.ColumnSpan="3"/>
+                    <Button Content="Добавить в корзину" HorizontalAlignment="Left" Margin="47,332,0,0" VerticalAlignment="Top" Width="214" Height="52" Click="Button_Click" Grid.ColumnSpan="2" />
+                    <TextBox x:Name="tbNameJewelry" TextWrapping="Wrap" Text="{Binding SelectedItem.Name_Jewelry, ElementName=dgJewelry}" Grid.Column="1" Margin="205.6,308,293.2,110.8" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbAmmount" TextWrapping="Wrap" Text="1" Grid.Column="2" Margin="283.8,308,13.4,110.8" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbCost" TextWrapping="Wrap" Text="{Binding SelectedItem.Cost, ElementName=dgJewelry}" Grid.Column="2" Margin="118.8,308,130.2,110.8"/>
+                    <TextBox x:Name="tbAmmount_Weapon" TextWrapping="Wrap" Text="1" Grid.Column="2" Margin="281,358,16,7" Grid.ColumnSpan="2" Visibility="Hidden"/>
+                    <Label Content="Название" Grid.Column="1" HorizontalAlignment="Left" Margin="206,282,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="162"/>
+                    <Label Content="Цена" Grid.Column="2" HorizontalAlignment="Left" Margin="119.8,283,0,0" VerticalAlignment="Top" Width="162"/>
+                    <Label x:Name="lbAmmount" Content="Количество" Grid.Column="2" HorizontalAlignment="Left" Margin="283.8,283,0,0" VerticalAlignment="Top" Width="162" Grid.ColumnSpan="2"/>
+                    <Button Content="Увеличить количество" HorizontalAlignment="Left" Margin="47,282,0,0" VerticalAlignment="Top" Width="214" Height="26" Grid.ColumnSpan="2" Click="Button_Click_2" />
+                    <Button Content="Уменьшить количество" HorizontalAlignment="Left" Margin="47,308,0,0" VerticalAlignment="Top" Width="214" Height="26"  Grid.ColumnSpan="2" Click="Button_Click_3" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Car" Header="Корзина">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="118*"/>
+                        <ColumnDefinition Width="255*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Content="Назад" HorizontalAlignment="Left" Margin="6.4,367,0,0" VerticalAlignment="Top" Width="91" Height="17" Grid.Column="1" Click="Button_Click_1" Grid.ColumnSpan="2" />
+                    <TextBox x:Name="tbKorz" Grid.Column="2" HorizontalAlignment="Left" Height="259" Margin="10,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="698" Grid.ColumnSpan="2"/>
+                    <Label Content="Название " Grid.Column="2" Margin="32,23,97,341" RenderTransformOrigin="0.295,-0.185"/>
+                    <Label Content="Цена за штуку" Grid.Column="3" Margin="185,25,218.4,339.8" RenderTransformOrigin="0.295,-0.185"/>
+                    <Label Content="Количество" Grid.Column="2" Margin="219,23,419.4,340.8" RenderTransformOrigin="0.295,-0.185" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="tbSumm" Grid.Column="2" HorizontalAlignment="Left" Height="21" Margin="97,365,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="105"/>
+                    <Label Content="Общая сумма" Grid.Column="2" Margin="99,334,43,27.2" RenderTransformOrigin="0.295,-0.185"/>
+                    <TextBox x:Name="tbNamber" Grid.Column="3" HorizontalAlignment="Left" Height="20" Margin="236,366,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+                    <Label Content="Введите вашу электронную почту" Grid.Column="3" Margin="215,332,99.4,28.8" RenderTransformOrigin="0.295,-0.185"/>
+                    <Button Content="Заказать" HorizontalAlignment="Left" Margin="398,368,0,0" VerticalAlignment="Top" Width="91" Height="17" Grid.Column="3" Click="Button_Click_4" />
+                </Grid>
+            </TabItem>
+            <Button Content="Button" Height="100" Width="75"/>
+
+
+        </TabControl>
+
+    </Grid>
+</Window>

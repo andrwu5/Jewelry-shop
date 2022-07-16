@@ -1,0 +1,15 @@
+﻿<Window x:Class="Jewelry_shop.Adress"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jewelry_shop"
+        mc:Ignorable="d"
+        Title="Наш адрес" Height="600" Width="1200" Icon="icon.ico">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Adress.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="7,538,0,11.4" Width="92" Click="Button_Click"/>
+    </Grid>
+</Window>
